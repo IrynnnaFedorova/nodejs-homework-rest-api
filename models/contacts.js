@@ -16,13 +16,13 @@ const contactSchema = new Schema({
         type: Boolean,
         default: false,
     },
-    owner: {
+     owner: {
         type: Schema.Types.ObjectId,
         ref: "user",
     },
-}, { versionKey: false, timestamps: true })
-
-const Contact = model('contact', contactSchema);
+  },
+  { versionKey: false, timestamps: true }
+);
 
 const contactAddSchema = Joi.object({
     name: Joi.string().required(),
