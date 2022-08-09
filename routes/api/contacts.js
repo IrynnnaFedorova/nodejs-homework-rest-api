@@ -1,3 +1,4 @@
+
 const express = require("express");
 const { ctrlContacts } = require("../../controllers");
 // const { ctrlWrapper } = require("../../helpers");
@@ -47,5 +48,4 @@ router.delete('/:contactId', auth, ctrlWrapper(ctrl.removeContact));
 router.put('/:contactId', auth, ctrlWrapper(ctrl.updateContactById));
 
 router.patch('/:contactId/favorite', auth, ctrlWrapper(ctrl.updateStatusContact));
-
 module.exports = router;
