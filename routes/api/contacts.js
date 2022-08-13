@@ -21,4 +21,7 @@ router.put('/:contactId', auth, ctrlWrapper(ctrl.updateContactById));
 
 router.patch('/:contactId/favorite', auth, ctrlWrapper(ctrl.updateStatusContact));
 
+router.get("/verify/:verificationToken", auth, ctrlWrapper(ctrl.verifyEmail));
+router.post("/verify", auth, ctrlWrapper(ctrl.repeatVerifyEmail)
+);
 module.exports = router;
