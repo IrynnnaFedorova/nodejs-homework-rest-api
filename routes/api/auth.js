@@ -6,7 +6,10 @@ const ctrl = require(`${basedir}/controllers/auth`);
 
 const { ctrlWrapper } = require(`${basedir}/helpers`);
 
-const { auth, upload } = require(`${basedir}/middlewares`);
+
+const { auth } = require(`${basedir}/middlewares`);
+// const { schemas } = require("../../models/user");
+
 
 const router = express.Router();
 
